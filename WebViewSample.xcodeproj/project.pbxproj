@@ -13,6 +13,9 @@
 		C524B30B1BFE659600E44A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C524B30A1BFE659600E44A7C /* Assets.xcassets */; };
 		C524B30E1BFE659600E44A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C524B30C1BFE659600E44A7C /* LaunchScreen.storyboard */; };
 		C524B3191BFE659600E44A7C /* WebViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524B3181BFE659600E44A7C /* WebViewSampleTests.swift */; };
+		C524B3271BFF70A200E44A7C /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524B3261BFF70A200E44A7C /* UIWebViewController.swift */; };
+		C524B3291BFF795600E44A7C /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524B3281BFF795600E44A7C /* WKWebViewController.swift */; };
+		C524B32B1BFF79BE00E44A7C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C524B32A1BFF79BE00E44A7C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		C524B3141BFE659600E44A7C /* WebViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C524B3181BFE659600E44A7C /* WebViewSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewSampleTests.swift; sourceTree = "<group>"; };
 		C524B31A1BFE659600E44A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C524B3261BFF70A200E44A7C /* UIWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
+		C524B3281BFF795600E44A7C /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		C524B32A1BFF79BE00E44A7C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C524B32B1BFF79BE00E44A7C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		C524B2F71BFE659600E44A7C = {
 			isa = PBXGroup;
 			children = (
+				C524B32A1BFF79BE00E44A7C /* WebKit.framework */,
 				C524B3021BFE659600E44A7C /* WebViewSample */,
 				C524B3171BFE659600E44A7C /* WebViewSampleTests */,
 				C524B3011BFE659600E44A7C /* Products */,
@@ -79,6 +87,8 @@
 			children = (
 				C524B3031BFE659600E44A7C /* AppDelegate.swift */,
 				C524B3051BFE659600E44A7C /* ViewController.swift */,
+				C524B3261BFF70A200E44A7C /* UIWebViewController.swift */,
+				C524B3281BFF795600E44A7C /* WKWebViewController.swift */,
 				C524B3071BFE659600E44A7C /* Main.storyboard */,
 				C524B30A1BFE659600E44A7C /* Assets.xcassets */,
 				C524B30C1BFE659600E44A7C /* LaunchScreen.storyboard */,
@@ -198,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C524B3061BFE659600E44A7C /* ViewController.swift in Sources */,
+				C524B3271BFF70A200E44A7C /* UIWebViewController.swift in Sources */,
 				C524B3041BFE659600E44A7C /* AppDelegate.swift in Sources */,
+				C524B3291BFF795600E44A7C /* WKWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flask.WebViewSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flask.WebViewSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
